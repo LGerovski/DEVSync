@@ -31,28 +31,36 @@
     </dependency>
   </dependencies>
   <build>
-    <plugins>
+      <plugins>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-compiler-plugin</artifactId>
+          <version>3.8.1</version> <!-- Check for the latest version -->
+          <configuration>
+            <source>1.8</source>
+            <target>1.8</target>
+          </configuration>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-jar-plugin</artifactId>
+          <version>3.2.0</version> <!-- Check for the latest version -->
+          <configuration>
+            <archive>
+              <manifest>
+                <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+                <mainClass>syncCompany.App</mainClass>
+              </manifest>
+            </archive>
+          </configuration>
+        </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.8.1</version> <!-- Check for the latest version -->
-        <configuration>
-          <source>1.8</source>
-          <target>1.8</target>
-        </configuration>
       </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-jar-plugin</artifactId>
-        <version>3.2.0</version> <!-- Check for the latest version -->
-        <configuration>
-          <archive>
-            <manifest>
-              <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
-              <mainClass>syncCompany.App</mainClass>
-            </manifest>
-          </archive>
-        </configuration>
       </plugin>
     </plugins>
   </build>
