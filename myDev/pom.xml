@@ -7,12 +7,10 @@
   <version>1.0-SNAPSHOT</version>
   <name>myDev</name>
   <url>http://maven.apache.org</url>
-
   <parent>
     <groupId>com.example</groupId>
     <version>1.0-SNAPSHOT</version>
     <artifactId>parentPom</artifactId>
-    <relativePath>../parentPom/pom.xml</relativePath>
   </parent>
 
   <dependencies>

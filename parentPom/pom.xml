@@ -7,9 +7,24 @@
   <version>1.0-SNAPSHOT</version>
   <name>parentPom</name>
   <url>http://maven.apache.org</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
   <build>
     <pluginManagement>
       <plugins>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-site-plugin</artifactId>
+          <version>3.12.1</version> <!-- Look for this version -->
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-deploy-plugin</artifactId>
+          <version>2.8.2</version> <!-- Look for this version -->
+        </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-compiler-plugin</artifactId>
@@ -17,6 +32,7 @@
           <configuration>
             <source>1.8</source>
             <target>1.8</target>
+            <encoding>UTF-8</encoding>
           </configuration>
         </plugin>
         <plugin>
